@@ -3,13 +3,13 @@ import numpy as np
 import time
 import argparse
 import sys
-import tkinter as tk
+import tkinter as st
 from tkinter import filedialog, ttk
 
 # Set up Tkinter root for file dialogs and sliders
-root = tk.Tk()
-root.title("Advanced Shape Analysis and Effects")
-root.geometry("400x800")  # Made taller to accommodate all settings
+file = st.file_uploader("Upload a file", type=["jpg", "png", "mp4"])
+if file is not None:
+    st.write("File uploaded:", file.name)
 
 # Create main frame for all controls
 main_frame = ttk.Frame(root)
